@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Open Weather</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list> 
+    <ion-item>
+      
+      <ion-input placeholder="Enter City" [(ngModel)]="city"> </ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="search()" >Search 
+  </ion-button>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{city}}</ion-card-subtitle>
+      <ion-card-title>{{apiKey}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        <div id="openweathermap-widget-15"></div>
+    </ion-card-content>
+  </ion-card> 
+</ion-content>
+
+<script>window.myWidgetParam 
+? window.myWidgetParam : window.myWidgetParam = 
+[];  window.myWidgetParam.push(
+  {
+  id: 15,
+  cityid: '2643743',
+  appid: '46ab1424d0eb1ddd7d704d71fd9273c2',
+  units: 'metric',
+  containerid: 'openweathermap-widget-15',  
+  }
+  );  
+  (
+    function() {
+      var script = document.createElement('script');
+      script.async = true;script.charset = "utf-8";
+      script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(script, s);  
+      }
+      )();
+</script>

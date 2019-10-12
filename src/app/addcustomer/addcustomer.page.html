@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add customer</ion-title>
+    <ion-buttons slot="primary"   >
+      <ion-back-button color="tertiary" text="Back" fill="outline">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-item> 
+  <ion-label position="floating"> Name </ion-label>
+  <ion-input type="text" [(ngModel)]="name_customer" placeholder="Enter Name"></ion-input>
+</ion-item>
+
+<ion-item> 
+    <ion-label position="floating"> Description </ion-label>
+    <ion-input type="text" [(ngModel)]="desc_customer" placeholder="Enter Description"></ion-input>
+  </ion-item>
+
+<ion-button expand="block"color="tertiary" (click)="createdProses()" fill="outline">Submit</ion-button>
+
+
+</ion-content>

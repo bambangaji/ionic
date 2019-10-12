@@ -1,0 +1,50 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar>
+    <ion-title>
+      Login Page
+    </ion-title>
+    <ion-buttons slot="primary" (click)="addCustomer()">
+      <ion-button color="tertiary" fill ="outline">
+        New
+        <ion-icon slot="end" name="add">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Username" [(ngModel)]="username">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Password" type="Password"[(ngModel)]="password">      </ion-input>
+    </ion-item>
+  </ion-list>
+ <ion-button   (click)="login()"> Login </ion-button>
+ <ion-button  color="danger"   (click)="goRegister()"> Register </ion-button>
+ <ion-item *ngIf="username=='nama'">
+    <ion-input placeholder="Password" type="Password"[(ngModel)]="password">      </ion-input>
+  </ion-item>
+  
+<ion-button *ngIf="username=='alert'"  > Show Alert</ion-button>
+
+<ion-list>
+    <ion-item>
+      <ion-input placeholder="Angka 1" [(ngModel)]="a">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Angka 2" [(ngModel)]="b">      </ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button   (click)="tambah()"> Tambah </ion-button>
+  <ion-input [(ngModel)]="hasil"></ion-input>
+
+  <ion-button (click)="openWeather()"> Open Weather </ion-button>
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register Page</ion-title>
+    <ion-buttons slot="primary"   >
+      <ion-back-button color="tertiary" text="Back" fill="outline">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+        <ion-list>
+    <ion-text color="black"> <h6>Username </h6> </ion-text>
+    <ion-item>
+      <ion-input placeholder="Enter Username" [(ngModel)]="username"></ion-input>  
+    </ion-item>
+
+    <ion-text color="black"> <h6>Email </h6> </ion-text>
+    <ion-item >
+          <ion-input placeholder="test@test.com" [(ngModel)]="email">
+      </ion-input>    </ion-item>
+
+      <ion-text color="black"> <h6>Address </h6> </ion-text>
+      <ion-item >   
+          <ion-input placeholder="Enter Address" type="text" [(ngModel)]="address"> 
+          </ion-input>    
+        </ion-item>
+
+        <ion-text color="black"> <h6>Password </h6> </ion-text>
+      <ion-item >
+    <ion-text color="black"> <h6> </h6> </ion-text>
+       <ion-input placeholder="Password" type="Password"[(ngModel)]="password">
+      </ion-input>    </ion-item>
+  
+    </ion-list>  
+
+  <ion-button (click)="register()" >Submit</ion-button>
+
+  
+</ion-content>
